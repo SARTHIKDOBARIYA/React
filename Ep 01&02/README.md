@@ -1,0 +1,12 @@
+# Parcel
+- Dev Build
+- Local Server
+- HMR - Hot modeule Replacement
+- File watching algorithm - written in c++
+- Caching
+- Image optimization
+- Minification
+- Bundling
+- Compress
+- Consistant Hasing
+- Code Splitting

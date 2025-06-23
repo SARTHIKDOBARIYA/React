@@ -1,3 +1,7 @@
+# we can run React without jsx
+
+# jsx is HTML like Syntax
+
 # Parcel
 - Dev Build
 - Local Server

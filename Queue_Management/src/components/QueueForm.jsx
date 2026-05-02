@@ -3,7 +3,7 @@ import {FaUserPlus} from'react-icons/fa'
 import '../App.css'
 
 export default function QueueForm({onAdd}){
-
+    
 
     const [name,setName] = useState('')
     const [service ,setService ] = useState('')

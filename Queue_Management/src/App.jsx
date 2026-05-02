@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import QueueForm from './components/QueueForm'
+import QueueDisplay from './components/QueueDisplay'
 
 export default function App(){
 
@@ -11,12 +12,12 @@ export default function App(){
     setQueue([...queue,{...customer,id:Date.now(),status:"waiting"}])
   }
 
-  const updateStatus = (customer)=>{
-    // change data in Queue
+  const updateStatus = (id,status)=>{
+    setQueue(queue.map((customer) => customer.id === id ? {...customer,status} : customer))
   }
 
-  const removeFromQueue = (customer)=>{
-    // remove data from  Queue
+  const removeFromQueue = (id)=>{
+    setQueue(queue.filter((customer) => customer.id !== id))
   }
 
   return (
@@ -28,7 +29,11 @@ export default function App(){
     </header>
     <main>
       <QueueForm onAdd={addToQueue}/>
-      <h1>Display Form</h1>
+      <QueueDisplay 
+      queue={queue}
+      onUpdateStatus={updateStatus}
+      onRemove = {removeFromQueue}
+      />
     </main>
     </div>
     </>

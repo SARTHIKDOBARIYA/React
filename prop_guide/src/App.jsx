@@ -4,7 +4,7 @@ import BasicProps from './components/BasicProps'
 import ChildrenProps from './components/ChildrenProps'
 import ComplexProps from './components/ComplexProps'
 import RefProps from './components/RefProps'
-import ThemeToggler from './components/ThemeToggler'
+import ThemeToggler, { ThemeProvider } from './components/ThemeToggler'
 import Navigation from './components/Navigation'
 
 function AppContent() {
@@ -74,7 +74,9 @@ function App() {
 
   return (
     <>
+    <ThemeProvider>
       <AppContent/>
+    </ThemeProvider>
     </>
   )
 }

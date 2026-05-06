@@ -4,12 +4,12 @@ import BasicProps from './components/BasicProps'
 import ChildrenProps from './components/ChildrenProps'
 import ComplexProps from './components/ComplexProps'
 import RefProps from './components/RefProps'
-import ThemeToggler, { ThemeProvider } from './components/ThemeToggler'
+import ThemeToggler, {ThemeProvider, useTheme} from './components/ThemeToggler'
 import Navigation from './components/Navigation'
 
 function AppContent() {
-  const isDark = true;
-  // const { isDark } = useTheme();
+  // const isDark = true;
+  const { isDark } = useTheme();
   return (
     <div
       className={`min-h-screen bg-gray-800 ${

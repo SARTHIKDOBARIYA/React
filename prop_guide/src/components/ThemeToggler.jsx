@@ -22,7 +22,7 @@ export function ThemeProvider({ children }) {
     );
 }
 
-// Custom hook to use theme
+// Custom hooks to use theme
 export function useTheme() {
     const context = useContext(ThemeContext);
     if (!context) {

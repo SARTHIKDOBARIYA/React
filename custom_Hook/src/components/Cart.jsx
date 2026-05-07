@@ -1,4 +1,4 @@
-import { CartItem } from './CartItem.jsx'
+import  CartItem  from './CartItem.jsx'
 
 function cart({cart,onUpdateQuantity,onRemove,total}) {
 
@@ -19,7 +19,7 @@ function cart({cart,onUpdateQuantity,onRemove,total}) {
           onRemove={onRemove}
           />
       ))}
-      <div className={cart-total}>
+      <div className="cart-total">
         <h3>Total : ${typeof total === 'string' ? total : total.toFixed(2)}</h3>
         <button className="checkout-btn">Checkout</button>
       </div>

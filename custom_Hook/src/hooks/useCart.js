@@ -37,8 +37,8 @@ export function useCart() {
 
     const addToCart = (product) => {
         setCart(currentCart => {
-            const existingitem = currentCart.find(item => item.id === product.id)
-            if(existingitem){
+            const existingItem = currentCart.find(item => item.id === product.id)
+            if(existingItem){
                 return currentCart.map(item => item.id === product.id ? {...item, quantity: item.quantity + 1} : item)
             }
             return [...currentCart,{...product,quantity:1}]

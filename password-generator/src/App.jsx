@@ -29,8 +29,13 @@ function App() {
 
   useEffect(() => {
     passwordGenerator()
-  },[length,numberAllowed,characterAllowed,setPassword])
+  },[length,numberAllowed,characterAllowed,passwordGenerator])
 
+  const copyPasswordToClipBoard = useCallback(()=>{
+    passwordRef.current?.select();
+    // passwordRef.current?.setSelectionRange(0,3);   // when ypu want to select first three character
+    window.navigator.clipboard.writeText(password)
+  },[password])
 
   return (
     <>
@@ -44,7 +49,7 @@ function App() {
             readOnly={true}
             ref={passwordRef}
             />
-          <button onClick={copyPasswordToClipBoard} className="bg-orange-500 text-white py-1 px-3">copy</button>
+          <button onClick={copyPasswordToClipBoard} className="bg-orange-500 text-white py-1 px-3 hover:bg-orange-900">copy</button>
         </div>
         <div className="flex gap-x-2 text-sm">
           <div className="flex items-center gap-x-1">

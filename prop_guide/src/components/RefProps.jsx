@@ -1,6 +1,6 @@
 import {useRef,forwardRef} from 'react'
 
-// Input component that accept ref prop
+// InputBox component that accept ref prop
 
 const CustomInput = forwardRef(({label,placeholder,className},ref)=>{
     return (
